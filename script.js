@@ -101,26 +101,36 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
-  if (startTime) return;
-
+  if (startTime) {
+    return;
+    
+  }
+    
   let count = 3;
+  
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
-
+    
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+    
     // finished timer
-    if (count == 0) {
+    if (count === 0) {
       // -------------- START TYPING -----------------
+      countdownOverlay.style.display = "none";
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      
       display.classList.remove("inactive");
-
+      display.contentEditable = "true";
+      
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+      
     }
     count--;
-  }, 1000);
+  }, 1000
+  );
+  
 };
 
 // START Countdown
@@ -132,7 +142,7 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
 
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
