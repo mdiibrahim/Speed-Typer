@@ -24,7 +24,7 @@ const typeController = (e) => {
   const newLetter = e.key;
 
   // Handle backspace press
-  if (newLetter == "Backspace") {
+  if (newLetter === "Backspace") {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
@@ -38,7 +38,8 @@ const typeController = (e) => {
     return;
   }
 
-  userText += newLetter;
+  userText+= newLetter;
+  console.log(userText)
 
   const newLetterCorrect = validate(newLetter);
 
@@ -106,7 +107,7 @@ const start = () => {
     
   }
     
-  let count = 3;
+  let count = -1;
   
   countdownOverlay.style.display = "flex";
 
@@ -115,13 +116,12 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
     
     // finished timer
-    if (count === 0) {
+    if (count === -1) {
       // -------------- START TYPING -----------------
       countdownOverlay.style.display = "none";
       document.addEventListener("keydown", typeController);
       
       display.classList.remove("inactive");
-      display.contentEditable = "true";
       
       clearInterval(startCountdown);
       startTime = new Date().getTime();
