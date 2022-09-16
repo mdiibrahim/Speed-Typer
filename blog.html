@@ -13,13 +13,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
     <style>
-        body{
+        body {
             background-image: url('bg.png');
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <nav class="d-flex justify-content-center">
+            <div>
+                <a href="index.html">
+                    <h1 class="title me-5"><img src="./logo.png" /></h1>
+                </a>
+            </div>
+            <div>
+
+                <a href="blog.html" class="text-decoration-none text-white">
+                    <h1>Blogs</h1>
+                </a>
+            </div>
+
+        </nav>
+        <div class="display-5 container text-white my-5">
+            <p>Here some question's answer: </p>
+        </div>
+    </header>
     <main class="container">
         <!------------
        blog questions
@@ -132,27 +151,32 @@
                                 The uninitialized variable will give the <strong>undefined</strong>. Ex: let x;
                             </p>
                             <p>
-                                In object, if a property doesn't exist the object that will give <strong>undefined</strong>.
+                                In object, if a property doesn't exist the object that will give
+                                <strong>undefined</strong>.
                             </p>
                             <p>
-                                In array, when we want to access the array element which is the out of the index range then we get the <strong>undefined</strong>.
-                                <p>
-                                    Deleting an element inside of an array, it will give the <strong>undefined</strong>
-                                </p>
+                                In array, when we want to access the array element which is the out of the index range
+                                then we get the <strong>undefined</strong>.
+                            <p>
+                                Deleting an element inside of an array, it will give the <strong>undefined</strong>
+                            </p>
                             </p>
                             <p>
-                                In function: 
-                                When we call a function and there is no return value of that function then we will get the <strong>undefined</strong>.
-                                <p>
-                                    When we doesn't pass the arguments according to the function parameter list then it will give <strong>undefined</strong>.
-                                </p>
-                                <p>
-                                    When we call a function and they return only the return keyword  of then we will get the <strong>undefined</strong>.
-                                    ex: function add(a,b){
-                                
-                                        return;
-                                    }
-                                </p>
+                                In function:
+                                When we call a function and there is no return value of that function then we will get
+                                the <strong>undefined</strong>.
+                            <p>
+                                When we doesn't pass the arguments according to the function parameter list then it will
+                                give <strong>undefined</strong>.
+                            </p>
+                            <p>
+                                When we call a function and they return only the return keyword of then we will get the
+                                <strong>undefined</strong>.
+                                ex: function add(a,b){
+
+                                return;
+                                }
+                            </p>
                             </p>
                         </div>
                     </div>
