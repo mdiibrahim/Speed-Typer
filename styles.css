@@ -151,6 +151,7 @@ button {
 #histories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
 }
 
 .card {
@@ -161,8 +162,6 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 30px;
-  border-color: whitesmoke;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
